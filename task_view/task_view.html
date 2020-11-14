@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Simple To Do List web application"/>
+    <meta name="keywords" content="to do list"/>
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="../styles.css"/>
+    <link rel="stylesheet" href="task_view.css"/>
+    <script src="../script.js" defer="defer"></script>
+    <script type="module" src="task_view.js" defer="defer"></script>
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <h1>ToDoList App</h1>
+    </header>
+
+    <nav class="navigation-bar">
+        <ul>
+            <li><a href="../index.html">main</a></li>
+            <li><a href="../about/about.html">about</a></li>
+            <li><a href="../user_list/user_list.html">users</a></li>
+        </ul>
+    </nav>
+
+    <section class="main-section">
+        <article class="text--justified">
+            <section>
+                <h3>Details</h3>
+                <div class="details-grid">
+                    <label for="description">Description:</label><span id="description">description</span>
+                    <label for="extendedDescription">Extended Description:</label><span id="extendedDescription">extendedDescription</span>
+                    <label for="priority">Priority:</label><span id="priority">priority</span>
+                    <label for="username">Owner:</label><span id="username">username</span>
+                    <label for="email">Owner Email:</label><span id="email">username</span>
+                </div>
+            </section>
+            </br>
+            <a id="backButton" class="ui-control ui-button" href="#" >
+                <button class="ui-button ui-control" type="button">back</button>
+            </a>
+        </article>
+    </section>
+
+    <footer class="footer">
+        <p>Copyright &copy; 2020, Piotr Rogowski</p>
+    </footer>
+</div>
+</body>
+</html>

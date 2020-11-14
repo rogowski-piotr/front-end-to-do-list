@@ -1,0 +1,18 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0-SNAPSHOT",
+  "description": "To Do List Web App",
+  "keywords": [
+    "to-do-list"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rogowski-piotr/front-end-to-do-list.git"
+  },
+  "scripts": {
+    "dev": "http-server -p 8083 -c-1"
+  },
+  "devDependencies": {
+    "http-server": "0.12.3"
+  }
+}

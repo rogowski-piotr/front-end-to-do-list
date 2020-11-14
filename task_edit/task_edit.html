@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Simple To Do List web application"/>
+    <meta name="keywords" content="to do list"/>
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="../styles.css"/>
+    <link rel="stylesheet" href="task_edit.css"/>
+    <script src="../script.js" defer="defer"></script>
+    <script type="module" src="task_edit.js" defer="defer"></script>
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <h1>ToDoList App</h1>
+    </header>
+
+    <nav class="navigation-bar">
+        <ul>
+            <li><a href="../index.html">main</a></li>
+            <li><a href="../about/about.html">about</a></li>
+            <li><a href="../user_list/user_list.html">users</a></li>
+        </ul>
+    </nav>
+
+    <section class="main-section">
+        <article class="text--justified">
+            <header><h2>Edit task</h2></header>
+            <form class="character__form" id="infoForm">
+                <label for="description">Description:</label>
+                <input class="ui-control ui-input" id="description" name="description"/>
+                <label for="extendedDescription">Extended Description:</label>
+                <input class="ui-control ui-input" id="extendedDescription" name="extendedDescription"/>
+                <label for="priority">Priority:</label>
+                <input class="ui-control ui-input" id="priority" name="priority" type="number"/>
+                <input class="ui-control ui-button" type="submit" name="Update"/>
+            </form>
+        </article>
+    </section>
+
+    <footer class="footer">
+        <p>Copyright &copy; 2020, Piotr Rogowski</p>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Simple To Do List web application"/>
+        <meta name="keywords" content="to do list"/>
+        <title>ToDoList</title>
+        <link rel="stylesheet" href="../styles.css"/>
+        <script src="../script.js" defer="defer"></script>
+        <script type="module" src="user_list.js" defer="defer"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1>ToDoList App</h1>
+            </header>
+
+            <nav class="navigation-bar">
+                <ul>
+                    <li><a href="../index.html">main</a></li>
+                    <li><a href="../about/about.html">about</a></li>
+                    <li><a href="user_list.html">users</a></li>
+                </ul>
+            </nav>
+
+            <section class="main-section">
+                <article class="text--justified">
+                    <header><h2>Users</h2></header>
+                    <table>
+                        <tr>
+                            <td><h4>Add new user</h4></td>
+                            <td><button class="ui-button ui-control" onclick="location.href='../user_add/user_add.html'" type="button">add</button></td>
+                        </tr>
+                    </table>
+
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>name</th>
+                                <th>view</th>
+                                <th>tasks</th>
+                                <th>delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <tr>
+                                <td>name</td>
+                                <td><a href="#">view</a></td>
+                                <td><a href="#">task</a></td>
+                                <td>
+                                    <button class="ui-button ui-control">delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+            </section>
+
+            <footer class="footer">
+                <p>Copyright &copy; 2020, Piotr Rogowski</p>
+            </footer>
+        </div>
+    </body>
+</html>
