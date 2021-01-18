@@ -50,6 +50,8 @@ function displayTasks(tasks) {
 function createTableRow(task) {
     let tr = document.createElement('tr');
     tr.appendChild(createTextCell(task.description));
+    tr.appendChild(createTextCell(task.startDate));
+    tr.appendChild(createTextCell(task.plannedEndDate));
     tr.appendChild(createLinkCell('view', '../task_view/task_view.html?user=' + getParameterByName('user') + '&task=' + task.id));
     tr.appendChild(createLinkCell('edit', '../task_edit/task_edit.html?user=' + getParameterByName('user') + '&task=' + task.id));
     tr.appendChild(createButtonCell('delete', () => deleteTask(task.id)));

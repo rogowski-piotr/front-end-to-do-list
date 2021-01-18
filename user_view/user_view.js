@@ -1,18 +1,38 @@
 import {
     getParameterByName,
-    setTextNode
+    setTextNode,
+    createImageCell
 } from '../js/dom_utils.js';
 import {getBackendUrl} from '../js/configuration.js';
 
 window.addEventListener('load', () => {
     fetchAndDisplayUser();
     addEditButton();
+    fetchAndDisplayAvatar();
 });
+
+
+/**
+ * Fetches and display avatar of user
+ */
+function fetchAndDisplayAvatar() {
+    const img = document.getElementById("avatar");
+    const url = getBackendUrl() + '/api/users/' + getParameterByName('user') + "/portrait";
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+    xhr.responseType = "arraybuffer";
+    xhr.onload = function(oEvent) {
+        let blob = new Blob([oEvent.target.response], {type: "image/png"});
+        img.src = URL.createObjectURL(blob);
+    };
+    xhr.send();
+}
 
 /**
  * Fetches single user and modifies the DOM tree in order to display it.
  */
 function fetchAndDisplayUser() {
+    createImageCell
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {

@@ -24,6 +24,8 @@ function displayTask(task) {
     setTextNode('description', task.description);
     setTextNode('extendedDescription', task.extendedDescription);
     setTextNode('priority', task.priority);
+    setTextNode('startDate', task.startDate);
+    setTextNode('plannedEndDate', task.plannedEndDate);
     setTextNode('username', task.owner.firstName + " " + task.owner.lastName);
     setTextNode('email', task.owner.email);
 }

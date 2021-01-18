@@ -21,7 +21,9 @@ function addAction(event) {
     const request = {
         'description': document.getElementById('description').value,
         'extendedDescription': document.getElementById('extendedDescription').value,
-        'priority': parseInt(document.getElementById('priority').value)
+        'priority': parseInt(document.getElementById('priority').value),
+        'startDate': document.getElementById('startDate').value,
+        'plannedEndDate': document.getElementById('plannedEndDate').value
     };
 
     xhttp.setRequestHeader('Content-Type', 'application/json');
